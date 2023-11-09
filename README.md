@@ -106,4 +106,4 @@ def robot_behavior_tree(robot: Robot) -> None:
 ```
 
 #### Результат
-![robot](https://github.com/ionic101/robot-algorithm/assets/93050090/f57de209-eee8-43b0-886a-f4949c7e097b)
+![robot](https://github.com/ionic101/pyrobot/assets/93050090/391e2da2-8463-4eb5-bcae-89543210a339)
