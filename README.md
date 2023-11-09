@@ -1,9 +1,10 @@
 # Программа для написания алгоритма робота
 
-Базовый функционал программы схож на [КуМир](https://www.niisi.ru/kumir/) и [Среду "Исполнители"](https://kpolyakov.spb.ru/school/robots/robots.htm). Отличие заключается в том, что в этой программе необходимо писать алгоритм робота на языке `python` при помощи методов и функций.
+Базовый функционал программы схож на функционал [КуМира](https://www.niisi.ru/kumir/) и [Среды "Исполнители"](https://kpolyakov.spb.ru/school/robots/robots.htm). Отличие заключается в том, что в этой программе необходимо писать алгоритм робота на языке `python` при помощи методов и функций.
 
 ## Инструкция по использованию
 
+Для использования программы необходимо иметь установленную библиотеку `tkinter`.
 Для запуска программы необходимо запустить файл под названием `main.py`. 
 Алгоритм необходимо писать в файле `script.py`
 
@@ -45,7 +46,7 @@
 ```
 
 #### Отображение уровня в программе
-![level](https://github.com/ionic101/robot-algorithm/assets/93050090/d5208eef-e611-4e81-9307-1c8e9eb9bea6)
+![level](https://github.com/ionic101/robot-algorithm/assets/93050090/dacc10a7-875c-46b1-9a51-12b49b880819)
 
 ## Настройка программы
 Настроить программу можно в файле `settings.py`
@@ -85,7 +86,7 @@ def robot_behavior_tree(robot: Robot) -> None:
 
     robot.turn_left()
 
-    for _ in range(8):
+    while not robot.check_wall_ahead():
         robot.move()
     
     robot.turn_left()
