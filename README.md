@@ -57,7 +57,7 @@ import direction
 WINDOW_TITLE = 'Robot'
 LEVEL_FILE_NAME = 'level.txt'
 
-CELL_SCALE = 50
+CELL_SCALE = 150
 
 ROBOT_SCALE = 0.6
 ROBOT_START_DIRECTION = direction.Up
