@@ -10,25 +10,4 @@ robot.plant() - вспахать грядку
 '''
 
 def robot_behavior_tree(robot: Robot) -> None:
-    for _ in range(3):
-        robot.move()
-
-    robot.turn_left()
-
-    while not robot.check_wall_ahead():
-        robot.move()
-    
-    robot.turn_left()
-
-    for _ in range(2):
-        robot.move()
-    
-    if robot.check_garden_under():
-        robot.plant()
-    
-    robot.move()
-
-    robot.turn_left()
-
-    for _ in range(4):
-        robot.move()
+    pass
