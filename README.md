@@ -14,7 +14,7 @@
 + robot.turn_right() - повернуть робота направо
 + robot.check_garden_under() - возвращает True, если под роботом находится невспашенная грядка
 + robot.check_wall_ahead() - возвращает True, если перед роботом находится стена
-+ robot.plant() - засеять грядку
++ robot.plant() - вспахать грядку
 
 ## Настройка уровня
 Уровень можно настроить в файле `level.txt`. Количество символов в каждой строке должно **совпадать**.
@@ -22,8 +22,8 @@
 #### Обозначения символов
 + "\#" - стена
 + "r" - начальная позиция робота
-+ "g" - незасеянная грядка
-+ "p" - засеянная грядка
++ "g" - невспашенная грядка
++ "p" - вспашенная грядка
 + "\*" - клетки, на которых был робот
 + " " - пустое пространство
 
@@ -74,3 +74,35 @@ COLORS = {
     ' ': 'white'
 }
 ```
+
+## Пример написания алгоритма робота
+Весь код необходимо писать в файле `script.py` в методе `robot_behavior_tree`
+#### Код
+```python
+def robot_behavior_tree(robot: Robot) -> None:
+    for _ in range(3):
+        robot.move()
+
+    robot.turn_left()
+
+    for _ in range(8):
+        robot.move()
+    
+    robot.turn_left()
+
+    for _ in range(2):
+        robot.move()
+    
+    if robot.check_garden_under():
+        robot.plant()
+    
+    robot.move()
+
+    robot.turn_left()
+
+    for _ in range(4):
+        robot.move()
+```
+
+#### Результат
+![robot](https://github.com/ionic101/robot-algorithm/assets/93050090/f57de209-eee8-43b0-886a-f4949c7e097b)
