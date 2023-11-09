@@ -46,7 +46,7 @@
 ```
 
 #### Отображение уровня в программе
-![level](https://github.com/ionic101/robot-algorithm/assets/93050090/dacc10a7-875c-46b1-9a51-12b49b880819)
+![level](https://github.com/ionic101/pyrobot/assets/93050090/84f319c6-172e-46f1-bb5b-09fc36fa8d7a)
 
 ## Настройка программы
 Настроить программу можно в файле `settings.py`
